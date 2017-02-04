@@ -11,7 +11,7 @@ class App extends Component {
     }
 
     checkPrice() {
-        axios.get('http://api.coindesk.com/v1/bpi/currentprice/usd.json').then(function(res) {
+        axios.get('https://api.coindesk.com/v1/bpi/currentprice/usd.json').then(function(res) {
           window.hello = res;
             const rate = res.data.bpi.USD.rate
             console.log(rate)
