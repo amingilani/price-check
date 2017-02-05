@@ -12,7 +12,7 @@ class App extends Component {
 
     checkPrice() {
         axios.get('https://apiv2.bitcoinaverage.com/constants/exchangerates/global').then(function(res) {
-            const rate = res.data.rates.USD.rate
+            const rate = res.data.rates.PKR.rate
             console.log(rate)
             this.setState({price: rate});
         }.bind(this))
@@ -24,9 +24,9 @@ class App extends Component {
         return (
             <div className="App">
                 <p>
-                    the current price of a bitcoin is ${price
+                    The exchange rate is {price
                         ? price
-                        : 'loading...'}
+                        : '...loading...'} Pakistani Rupees per US Dollar.
                 </p>
             </div>
         );
